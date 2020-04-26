@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Reset some basic elements
  */
@@ -145,11 +144,6 @@ pre {
 
 .wrapper-content {
   padding-right: 30px; }
-
-/* hier die Aufteilung für den header machen */
-.wrapper-header {
-  display: grid;
-  grid-template-columns: auto 320px; }
 
 /**
  * Footer wrapper - copy of wrapper but without grid
@@ -394,41 +388,59 @@ table {
  * Site header
  */
 .site-header {
-  border: none;
-  /*background-color: $brand-color;*/
-  background-color: white;
-  /*
-  background-image: url("/assets/images/header-background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  */
-  /* logo */ }
-  .site-header img.logo {
-    margin-top: 30px;
-    max-width: 100%;
-    height: auto; }
-  .site-header .nav {
-    /*background-image: url("/assets/images/header-banner-traumelf.png");*/
-    background-repeat: no-repeat;
-    background-size: contain; }
-    .site-header .nav ul {
-      display: flex;
-      padding: 0;
-      margin: 0; }
-      .site-header .nav ul li {
-        display: flex;
-        flex-direction: row;
-        padding: 0; }
-        .site-header .nav ul li a {
-          flex-grow: 1;
-          padding: 10px;
-          background-color: white;
-          color: #383431; }
-        .site-header .nav ul li a:hover, .site-header .nav ul li .active {
-          background-color: #3e8465;
-          color: white;
-          -webkit-transition: .1s;
-          text-decoration: none; }
+  border-top: none;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 55.95px; }
+
+.header_left, .header_right {
+  display: flex;
+  flex-direction: column; }
+
+.header_left {
+  flex-grow: 1; }
+
+.header_right {
+  flex-grow: 1; }
+
+.logo {
+  width: 100px;
+  max-width: 300px; }
+
+.site-title {
+  font-size: 27.625px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left; }
+  .site-title, .site-title:visited {
+    color: #424242; }
+
+.custom-nav .menu-icon {
+  display: none; }
+.custom-nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0; }
+  .custom-nav ul li {
+    display: flex;
+    flex-direction: row;
+    padding: 0; }
+    .custom-nav ul li a {
+      flex-grow: 1;
+      line-height: 100px !important;
+      padding-right: 10px;
+      padding-left: 10px; }
+    .custom-nav ul li a:hover, .custom-nav ul li .active {
+      background-color: #3e8465;
+      color: white;
+      -webkit-transition: .1s;
+      text-decoration: none; }
+  .custom-nav ul li:first-child a {
+    padding-left: 0; }
+  .custom-nav ul li:first-child a:hover {
+    background-color: white; }
+.custom-nav .page-link {
+  color: #383431; }
 
 .about .person {
   padding-bottom: 30px;
