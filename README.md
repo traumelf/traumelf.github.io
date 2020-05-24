@@ -1,51 +1,32 @@
 # Meine Traumelf
 
-## Command line helpers
+## Layout
 
-```bash
-# wo bin ich?
-pwd
+* pink -   ganz klein              - eine Spalte ohne sidebar  - Mobile
+* rot -    $on-palm: 600px         - eine Spalte ohne sidebar  - Mobile landscape
+* grün -   $on-laptop: 768px       - zwei Spalten ohne sidebar - IPad
+* blau -   $on-desktop: 992px      - eine Spalte mit sidebar   - IPad pro / Desktop
+* orange - $on-wide-screen: 1200px - zwei Spalten mit sidebar  - Desktop
 
-# Liste der Dateien im aktuellen Verzeichnis
-ls
-ls -l
-ls -al
+### Sidebar
 
-# in ein Verzeichnis wechseln
-cd ein/name/unterordner
+Die Einstellungen zur Sidebar findet man in base.scss unter .wrapper
+Die Spaltenaufteilung des Contents sind unter page.scss und post.scss konfiguriert.
 
-## git
-# den neueste Stand von externer Quelle holen
-git pull
+```
+// outter
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-gap: $spacing-unit / 4;
 
-# branches listen
-git branch
-
-# in einen Branch wechseln
-git checkout branchname
-
-# optional einen neuen branch anlegen
-git checkout -b neuerbranchname
-
-# einen branch mit einem anderen mergen
-git merge name-des-branches-den-ich-in-den-aktuellen-branch-mergen-möchte
-
-# den Stand der Dinge des aktuellen branches publizieren
-git push
-
-## jekyll
-# Seite bauen
-jekyll build
-
-# Seite bauen und bereitstellen
-jekyll serve
-
-# jekyll anhalten
-ctrl + c
+//inner
+display: flex;
+flex-direction: column;
 ```
 
 
-## Wie erstelle ich einen neuen Artikel?
+
+## Neuen Artikel erzeugen
 
 1. Im  Ordner 'posts' eine neue Datei angelegen.
 2. Der Name der Datei ist nach einem festen Schema anzulegen: "YYYY-MM-dd-vorname-nachname.md"
@@ -172,28 +153,63 @@ Google Analytics ist eingebunden über ein include "google-analytics.html". Der 
 
     JEKYLL_ENV=production bundle exec jekyll build
 
-## Server
-
-Dies ist Dokumentation zum Server und ist nicht relevant für die Jekyll-Website selbst.
-
-### SSH Zugriff
-
-    ssh martin@46.231.179.8
-
-### Deployment via Webhook
-
-1. webhook > http://46.231.179.8/api/update
-2. /home/martin/webhookendpoint.py
-3. /home/martin/jekyll_rebuild.sh
-
-Der endpoint wird durch Apache bereitgestellt. Siehe config
-
-    vim /etc/apache2/sites-enabled/traumelf.de-le-ssl.conf'
-
-Das Python-Script muss als background job laufen.
-
-    python webhookendpoint.py &
 
 ### Domain
 
   * https://meine-traumelf.de
+
+
+## Liquid in Jekyll
+
+Liquid ist die HTML Template Sprache, welche in Jekyll verwendet wird.
+
+Dokumentation:
+
+* https://shopify.github.io/liquid/
+
+
+
+
+## Command line helpers
+
+```bash
+# wo bin ich?
+pwd
+
+# Liste der Dateien im aktuellen Verzeichnis
+ls
+ls -l
+ls -al
+
+# in ein Verzeichnis wechseln
+cd ein/name/unterordner
+
+## git
+# den neueste Stand von externer Quelle holen
+git pull
+
+# branches listen
+git branch
+
+# in einen Branch wechseln
+git checkout branchname
+
+# optional einen neuen branch anlegen
+git checkout -b neuerbranchname
+
+# einen branch mit einem anderen mergen
+git merge name-des-branches-den-ich-in-den-aktuellen-branch-mergen-möchte
+
+# den Stand der Dinge des aktuellen branches publizieren
+git push
+
+## jekyll
+# Seite bauen
+jekyll build
+
+# Seite bauen und bereitstellen
+jekyll serve
+
+# jekyll anhalten
+ctrl + c
+```

@@ -11,21 +11,32 @@
   <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico"/>
   <link rel="stylesheet" href="/assets/main.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Meine Traumelf" /></head>
 <body><header class="site-header" role="banner">
-  <div class="wrapper">
-      <nav class="custom-nav">
-        <ul>
-            <li><a href="/" class="page-link"><img class="logo" src="/assets/images/logos/01_traumelf_logo.png" alt="Home"></a></li>
-            <li><a  class="active page-link"  href="/spieler/">Spieler</a></li>
-            <li><a  class="page-link"  href="/trainer/">Trainer</a></li>
-            <li><a  class="page-link"  href="/vereine/">Vereine</a></li>
-            <li><a  class="page-link"  href="/suche/">Suche</a></li>
-        </ul>
-      </nav>
-  </div>
+
+  <a href="javascript:void(0);" class="burger-icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <a href="/" class="page-link"><img class="logo" src="/assets/images/logos/01_traumelf_logo.png" alt="Home"></a>
+
+  <h1 class="welcome-headline">
+    <span class="first-word">Meine</span>
+		<span class="second-word">Traumelf</span>
+	</h1>
+
+  <nav id="myTopnav" class="topnav">
+    <div>
+        <a  class="active page-link"  href="/spieler/">Spieler</a>
+        <a  class="page-link"  href="/trainer/">Trainer</a>
+        <a  class="page-link"  href="/vereine/">Vereine</a>
+        <a  class="page-link"  href="/suche/">Suche</a>
+    </div>
+  </nav>
+
 </header>
 <main class="page-content" aria-label="Content">
 
@@ -39,6 +50,17 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
 </p>
 
     <ul class="post-list"><li class="article">
+  <h3><a class="post-link" href="/spieler/fabian-boll/">Fabian Boll</a></h3>
+
+  <a class="post-link" href="/spieler/fabian-boll/">
+      <div class="img-container-wrapper">
+          <div class="img-container" style="background-image:url(/assets/images/person/Fabian-Boll.png);"></div>
+      </div>
+  </a><p class="post-list-excerpt">Fabian Boll war über viele Jahre Publikumsliebling und Gesicht des Kiezklubs. Hier stellt er nicht nur seine Traumelf aus St.-Pauli-Legenden vor, sondern hat für jede Position noch einen Ersatzmann parat. Dabei erinnert er sich unter anderem an die große Fresse von Max Kruse, seine Sozialarbeit für Deniz Naki und den inneren Schweinehund von Marius Ebbers. Außerdem blickt der »Boller« auf seine Zeit am Millerntor zurück, lässt die umjubelten Aufstiege Revue passieren und spricht über sein besonderes Verhältnis zu Ex-Trainer Holger Stanislawski. </p><p class="button-container">
+      <a href="/spieler/fabian-boll/" class="button">Zur Traumelf</a>
+  </p>
+</li>
+<li class="article">
   <h3><a class="post-link" href="/spieler/marco-grimm/">Marco Grimm</a></h3>
 
   <a class="post-link" href="/spieler/marco-grimm/">
@@ -159,17 +181,6 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
       <a href="/spieler/holger-wehlage/" class="button">Zur Traumelf</a>
   </p>
 </li>
-<li class="article">
-  <h3><a class="post-link" href="/spieler/bernd-franke/">Bernd Franke</a></h3>
-
-  <a class="post-link" href="/spieler/bernd-franke/">
-      <div class="img-container-wrapper">
-          <div class="img-container" style="background-image:url(/assets/images/person/Torwart-Bernd-Franke-im-Trikot-von-Eintracht-Braunschweig.png);"></div>
-      </div>
-  </a><p class="post-list-excerpt">“Adler” Bernd Franke war hinter Sepp Maier und Toni Schumacher rund zehn Jahre die Nr. 2 im Tor der Nationalmannschaft. Trotz lukrativer Angebote von Bayern München, dem 1. FC Kaiserslautern, Eintracht Frankfurt und Ajax Amsterdam ist er Eintracht Braunschweig trotz zweier Abstiege 14 Jahre treu geblieben und in dem Verein zur Torwart-Legende geworden. Das spiegelt sich auch in seiner persönlichen Traumelf wider, die wie ein All-Star-Team des BTSV daherkommt. Dabei erinnert er sich an außergewöhnliche Mitspieler, den knallharten Trainer Branko Zebec und die knapp verpasste Deutsche Meisterschaft.</p><p class="button-container">
-      <a href="/spieler/bernd-franke/" class="button">Zur Traumelf</a>
-  </p>
-</li>
 </ul>
 
 <p class="pagination-divider"></p>
@@ -231,6 +242,10 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
 
     <ul>
     
+        <li><a href="/trainer/willi-lemke/">Willi Lemke</a></li>
+    
+        <li><a href="/spieler/fabian-boll/">Fabian Boll</a></li>
+    
         <li><a href="/spieler/marco-grimm/">Marco Grimm</a></li>
     
         <li><a href="/spieler/dennis-brinkmann/">Dennis Brinkmann</a></li>
@@ -277,9 +292,9 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
     
         <li><a href="/spieler/heiko-scholz/">Heiko Scholz</a></li>
     
-        <li><a href="/spieler/Florian-Bruns/">Florian Bruns</a></li>
+        <li><a href="/spieler/florian-bruns/">Florian Bruns</a></li>
     
-        <li><a href="/spieler/Steffi-Jones/">Steffi Jones</a></li>
+        <li><a href="/spieler/steffi-jones/">Steffi Jones</a></li>
     
         <li><a href="/trainer/rainer-zobel-coach/">Rainer Zobel (Trainer)</a></li>
     
@@ -344,6 +359,7 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
+
 </div>
 
 
@@ -377,7 +393,18 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
   </div>
 
 </footer>
-<script src="/assets/js/lunr.min.js"></script>
+<script>
+    // responsive navigation
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    <script src="/assets/js/lunr.min.js"></script>
     <script src="/assets/js/lunr-feed.js"></script>
 <script>
 window.cookieconsent.initialise({

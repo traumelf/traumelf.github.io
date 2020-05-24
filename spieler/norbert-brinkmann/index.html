@@ -11,21 +11,32 @@
   <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico"/>
   <link rel="stylesheet" href="/assets/main.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Meine Traumelf" /></head>
 <body><header class="site-header" role="banner">
-  <div class="wrapper">
-      <nav class="custom-nav">
-        <ul>
-            <li><a href="/" class="page-link"><img class="logo" src="/assets/images/logos/01_traumelf_logo.png" alt="Home"></a></li>
-            <li><a  class="active page-link"  href="/spieler/">Spieler</a></li>
-            <li><a  class="page-link"  href="/trainer/">Trainer</a></li>
-            <li><a  class="page-link"  href="/vereine/">Vereine</a></li>
-            <li><a  class="page-link"  href="/suche/">Suche</a></li>
-        </ul>
-      </nav>
-  </div>
+
+  <a href="javascript:void(0);" class="burger-icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <a href="/" class="page-link"><img class="logo" src="/assets/images/logos/01_traumelf_logo.png" alt="Home"></a>
+
+  <h1 class="welcome-headline">
+    <span class="first-word">Meine</span>
+		<span class="second-word">Traumelf</span>
+	</h1>
+
+  <nav id="myTopnav" class="topnav">
+    <div>
+        <a  class="active page-link"  href="/spieler/">Spieler</a>
+        <a  class="page-link"  href="/trainer/">Trainer</a>
+        <a  class="page-link"  href="/vereine/">Vereine</a>
+        <a  class="page-link"  href="/suche/">Suche</a>
+    </div>
+  </nav>
+
 </header>
 <main class="page-content" aria-label="Content">
 
@@ -34,43 +45,49 @@
     <article class="post">
 
   <h1 class="post-title">Norbert Brinkmann</h1><div id="share-bar">
-
-    <div class="share-buttons">
-        <a  href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/spieler/norbert-brinkmann/"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on Facebook" >
-            <i class="fa fa-facebook-official share-button"></i>
-        </a>
-
-        <a  href="https://twitter.com/intent/tweet?text=Norbert Brinkmann&url=http://localhost:4000/spieler/norbert-brinkmann/"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on Twitter" >
-            <i class="fa fa-twitter share-button"></i>
-        </a>
-
-        <a  href="https://wa.me/?text=Norbert Brinkmann&url=http://localhost:4000/spieler/norbert-brinkmann/"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on WhatsApp" >
-            <i class="fa fa-whatsapp share-button"></i>
-        </a>
-
-        <a  href="https://www.tumblr.com/share/link?url=http://localhost:4000/spieler/norbert-brinkmann/"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on Tumblr" >
-            <i class="fa fa-tumblr share-button"></i>
-        </a>
-
-        <a  href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/spieler/norbert-brinkmann/&title=Norbert Brinkmann&summary=&source=Meine Traumelf"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on LinkedIn" >
-            <i class="fa fa-linkedin share-button"></i>
-        </a>
-
-        <a  href="mailto:?subject=Norbert Brinkmann&amp;body=Check out this site http://localhost:4000/spieler/norbert-brinkmann/"
-            title="Share via Email" >
-            <i class="fa fa-envelope share-button"></i>
-        </a>
+  <div class="share-buttons">
+    <div class="share-button">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/spieler/norbert-brinkmann/"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Facebook" >
+          <i class="fa fa-facebook-official"></i>
+      </a>
     </div>
+    <div class="share-button">
+      <a href="https://twitter.com/intent/tweet?text=Norbert Brinkmann&url=http://localhost:4000/spieler/norbert-brinkmann/"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Twitter" >
+          <i class="fa fa-twitter"></i>
+      </a>
+    </div>
+    <div class="share-button">
+      <a href="https://wa.me/?text=Norbert Brinkmann&url=http://localhost:4000/spieler/norbert-brinkmann/"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on WhatsApp" >
+          <i class="fa fa-whatsapp"></i>
+      </a>
+    </div>
+    <div class="share-button">
+      <a href="https://www.tumblr.com/share/link?url=http://localhost:4000/spieler/norbert-brinkmann/"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Tumblr" >
+          <i class="fa fa-tumblr"></i>
+      </a>
+    </div>
+    <div class="share-button">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/spieler/norbert-brinkmann/&title=Norbert Brinkmann&summary=&source=Meine Traumelf"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on LinkedIn" >
+          <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+    <div class="share-button">
+      <a href="mailto:?subject=Norbert Brinkmann&amp;body=Check out this site http://localhost:4000/spieler/norbert-brinkmann/"
+          title="Share via Email" >
+          <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+  </div>
 </div>
 <div class="post-content">
     <div class="img-container-wrapper">
@@ -190,44 +207,51 @@
 <tr><td>1974–1987</td><td>Bayer 05 Uerdingen</td><td>364 (10)</td></tr>
 </tbody>
 </table>
-<div id="share-bar">
 
-    <div class="share-buttons">
-        <a  href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/spieler/norbert-brinkmann/"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on Facebook" >
-            <i class="fa fa-facebook-official share-button"></i>
-        </a>
-
-        <a  href="https://twitter.com/intent/tweet?text=Norbert Brinkmann&url=http://localhost:4000/spieler/norbert-brinkmann/"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on Twitter" >
-            <i class="fa fa-twitter share-button"></i>
-        </a>
-
-        <a  href="https://wa.me/?text=Norbert Brinkmann&url=http://localhost:4000/spieler/norbert-brinkmann/"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on WhatsApp" >
-            <i class="fa fa-whatsapp share-button"></i>
-        </a>
-
-        <a  href="https://www.tumblr.com/share/link?url=http://localhost:4000/spieler/norbert-brinkmann/"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on Tumblr" >
-            <i class="fa fa-tumblr share-button"></i>
-        </a>
-
-        <a  href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/spieler/norbert-brinkmann/&title=Norbert Brinkmann&summary=&source=Meine Traumelf"
-            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-            title="Share on LinkedIn" >
-            <i class="fa fa-linkedin share-button"></i>
-        </a>
-
-        <a  href="mailto:?subject=Norbert Brinkmann&amp;body=Check out this site http://localhost:4000/spieler/norbert-brinkmann/"
-            title="Share via Email" >
-            <i class="fa fa-envelope share-button"></i>
-        </a>
+    <p class="">Teile diese Traumelf von Norbert Brinkmann:</p><div id="share-bar">
+  <div class="share-buttons">
+    <div class="share-button">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/spieler/norbert-brinkmann/"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Facebook" >
+          <i class="fa fa-facebook-official"></i>
+      </a>
     </div>
+    <div class="share-button">
+      <a href="https://twitter.com/intent/tweet?text=Norbert Brinkmann&url=http://localhost:4000/spieler/norbert-brinkmann/"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Twitter" >
+          <i class="fa fa-twitter"></i>
+      </a>
+    </div>
+    <div class="share-button">
+      <a href="https://wa.me/?text=Norbert Brinkmann&url=http://localhost:4000/spieler/norbert-brinkmann/"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on WhatsApp" >
+          <i class="fa fa-whatsapp"></i>
+      </a>
+    </div>
+    <div class="share-button">
+      <a href="https://www.tumblr.com/share/link?url=http://localhost:4000/spieler/norbert-brinkmann/"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on Tumblr" >
+          <i class="fa fa-tumblr"></i>
+      </a>
+    </div>
+    <div class="share-button">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/spieler/norbert-brinkmann/&title=Norbert Brinkmann&summary=&source=Meine Traumelf"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+          title="Share on LinkedIn" >
+          <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+    <div class="share-button">
+      <a href="mailto:?subject=Norbert Brinkmann&amp;body=Check out this site http://localhost:4000/spieler/norbert-brinkmann/"
+          title="Share via Email" >
+          <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+  </div>
 </div>
 <div class="post-meta">
   <span class="post-meta-item">Veröffentlicht: </span><time class="dt-published" datetime="2019-05-25T00:00:00+02:00" itemprop="datePublished">25.05.2019
@@ -257,14 +281,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -273,6 +289,7 @@
 
   
 
+    
     
     
 
@@ -284,14 +301,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -300,6 +309,7 @@
 
   
 
+    
     
     
 
@@ -311,14 +321,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -327,6 +329,7 @@
 
   
 
+    
     
     
 
@@ -338,14 +341,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -354,6 +349,7 @@
 
   
 
+    
     
     
 
@@ -365,14 +361,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -381,6 +369,7 @@
 
   
 
+    
     
     
 
@@ -392,14 +381,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -408,6 +389,7 @@
 
   
 
+    
     
     
 
@@ -419,14 +401,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -435,6 +409,7 @@
 
   
 
+    
     
     
 
@@ -446,14 +421,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -462,6 +429,7 @@
 
   
 
+    
     
     
 
@@ -473,6 +441,17 @@
 
     
     
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
 
     
 
@@ -482,6 +461,7 @@
 
     
     
+    
 
     
 
@@ -489,6 +469,97 @@
 
   
 
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
     
     
 
@@ -503,8 +574,8 @@
             <div class="related-img-container-wrapper">
                 <div class="img-container" style="background-image:url(/assets/images/person/Torwart-Werner-Vollack-im-Trikot-von-Bayer-Uerdingen-732x650.png);"></div>
             </div>
-            <em> <span class="label label-default">Bayer Uerdingen</span> </em>
         </a>
+        <a href="/verein/bayer-uerdingen/">Bayer Uerdingen</a>
     </div>
 
       
@@ -515,6 +586,7 @@
 
     
     
+    
 
     
 
@@ -522,6 +594,7 @@
 
   
 
+    
     
     
 
@@ -536,8 +609,8 @@
             <div class="related-img-container-wrapper">
                 <div class="img-container" style="background-image:url(/assets/images/person/Wolfgang-Funkel-im-FCK-Trikot.png);"></div>
             </div>
-            <em> <span class="label label-default">Bayer Uerdingen</span> </em>
         </a>
+        <a href="/verein/bayer-uerdingen/">Bayer Uerdingen</a>
     </div>
 
       
@@ -548,14 +621,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -564,6 +629,7 @@
 
   
 
+    
     
     
 
@@ -575,14 +641,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -591,6 +649,7 @@
 
   
 
+    
     
     
 
@@ -602,14 +661,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -618,6 +669,7 @@
 
   
 
+    
     
     
 
@@ -629,14 +681,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -645,6 +689,7 @@
 
   
 
+    
     
     
 
@@ -656,14 +701,6 @@
 
     
     
-
-    
-
-    
-
-  
-
-    
     
 
     
@@ -672,6 +709,7 @@
 
   
 
+    
     
     
 
@@ -683,6 +721,17 @@
 
     
     
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
 
     
 
@@ -692,6 +741,7 @@
 
     
     
+    
 
     
 
@@ -699,6 +749,47 @@
 
   
 
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+  
+
+    
     
     
 
@@ -738,6 +829,10 @@
     <h3>Die Traumelf weiterer Legenden</h3>
 
     <ul>
+    
+        <li><a href="/trainer/willi-lemke/">Willi Lemke</a></li>
+    
+        <li><a href="/spieler/fabian-boll/">Fabian Boll</a></li>
     
         <li><a href="/spieler/marco-grimm/">Marco Grimm</a></li>
     
@@ -785,9 +880,9 @@
     
         <li><a href="/spieler/heiko-scholz/">Heiko Scholz</a></li>
     
-        <li><a href="/spieler/Florian-Bruns/">Florian Bruns</a></li>
+        <li><a href="/spieler/florian-bruns/">Florian Bruns</a></li>
     
-        <li><a href="/spieler/Steffi-Jones/">Steffi Jones</a></li>
+        <li><a href="/spieler/steffi-jones/">Steffi Jones</a></li>
     
         <li><a href="/trainer/rainer-zobel-coach/">Rainer Zobel (Trainer)</a></li>
     
@@ -852,6 +947,7 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
+
 </div>
 
 
@@ -885,7 +981,18 @@
   </div>
 
 </footer>
-<script src="/assets/js/lunr.min.js"></script>
+<script>
+    // responsive navigation
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    <script src="/assets/js/lunr.min.js"></script>
     <script src="/assets/js/lunr-feed.js"></script>
 <script>
 window.cookieconsent.initialise({
