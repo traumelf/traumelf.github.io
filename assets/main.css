@@ -136,7 +136,7 @@ pre {
   padding-right: 15px;
   padding-left: 15px;
   /* Aufteilung mit und ohne sidebar */
-  /* etwas padding für die großen Seiten mit sidebar */ }
+  /* etwas padding für die großen Seiten mit sidebar und etwas größere Schrift*/ }
   @media screen and (max-width: 600px) {
     .wrapper {
       grid-template-columns: none;
@@ -166,7 +166,9 @@ pre {
       /*background-color: orange;*/ } }
   @media screen and (min-width: 992px) {
     .wrapper .wrapper-content {
-      padding-right: 30px; } }
+      padding-right: 30px; }
+      .wrapper .wrapper-content p {
+        font-size: 19px; } }
 
 /**
  * Footer wrapper - copy of wrapper but without grid
@@ -495,6 +497,9 @@ table {
   .site-header .topnav a {
     float: left;
     display: block;
+    text-transform: uppercase;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
     color: #383431;
     padding: 15px 30px;
     text-align: center;
@@ -513,6 +518,7 @@ table {
   @media screen and (max-width: 600px) {
     .site-header .burger-icon {
       position: absolute;
+      z-index: 1;
       top: 0;
       right: 0;
       display: block;
