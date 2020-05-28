@@ -436,6 +436,13 @@ table {
     @media screen and (min-width: 1200px) {
       .site-header .logo {
         width: 200px; } }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
   .site-header h1 {
     float: left;
     font-weight: bold;
@@ -446,7 +453,12 @@ table {
     /* das funktioniert nur in webkit Browsers */
     color: white;
     /* Fallback Farbe */
-    background: url(images/fussballrasen.jpg) no-repeat;
+    /*background: url(images/fussballrasen.jpg) no-repeat;*/
+    background: linear-gradient(to right, #3f8465, #E48624, #ead0b6);
+    /*
+        background-size: 400% 400%;
+    	  animation: gradient 15s ease infinite;
+    */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
     @media screen and (max-width: 600px) {
