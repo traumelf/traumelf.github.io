@@ -355,7 +355,7 @@ var store = [{
   "title": "Willi Lemke",
   "link": "/trainer/willi-lemke/",
   "image": null,
-  "date": "24.05.2020",
+  "date": "29.05.2020",
   "category": "Trainer",
   "tags": ["Werder Bremen"],
   "excerpt": "In seinen 17 Jahren als Manager von Werder Bremen hat Willi Lemke große Erfolge gefeiert und unzählige Spieler verpflichtet. Hier..."
