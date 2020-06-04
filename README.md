@@ -2,18 +2,40 @@
 
 ## Layout
 
-* pink -   ganz klein              - eine Spalte ohne sidebar  - Mobile
-* rot -    $on-palm: 600px         - eine Spalte ohne sidebar  - Mobile landscape
-* grün -   $on-laptop: 768px       - zwei Spalten ohne sidebar - IPad
-* blau -   $on-desktop: 992px      - eine Spalte mit sidebar   - IPad pro / Desktop
-* orange - $on-wide-screen: 1200px - zwei Spalten mit sidebar  - Desktop
+### Mobile first
+
+Die Seite reagiert auf die Größe des Bildschirms.
+
+| Größe | Name | Variable | Verhalten | Testfarbe |
+| :- | :- | :- | :- | :- |
+| < 600px | Mobile | - | eine Spalte ohne sidebar | Pink |
+| 600px bis 767px | Mobile landscape | $on-palm | eine Spalte ohne sidebar | Rot |
+| 768px bis 991px | IPad | $on-laptop | zwei Spalten ohne sidebar | Grün |
+| 992px bis 1199px | IPad Pro | $on-desktop | eine Spalte mit sidebar | Blau |
+| 1200px + | Desktop | $on-wide-screen | zwei Spalten mit sidebar | Orange |
+
+
+### Verfügbare Layouts
+
+- default
+  - layout-with-sidebar
+    - home
+    - about
+    - post
+    - spieler
+    - suche
+    - trainer
+    - vereine
+  - verein-layout-with-sidbar
+    - verein
+
 
 ### Sidebar
 
 Die Einstellungen zur Sidebar findet man in base.scss unter .wrapper
 Die Spaltenaufteilung des Contents sind unter page.scss und post.scss konfiguriert.
 
-```
+```yml
 // outter
 display: grid;
 grid-template-columns: repeat(6, 1fr);
@@ -24,9 +46,9 @@ display: flex;
 flex-direction: column;
 ```
 
+## Content
 
-
-## Neuen Artikel erzeugen
+### Artikel erzeugen
 
 1. Im  Ordner 'posts' eine neue Datei angelegen.
 2. Der Name der Datei ist nach einem festen Schema anzulegen: "YYYY-MM-dd-vorname-nachname.md"
@@ -70,7 +92,7 @@ Hinweise
 * Das include ist nicht Teil des front matter jedoch gehört es immer an den Anfang eines Artikels. Darüber werden die obigen Grafiken und Texte eingebunden.
 * Danach kannst du im Markdown-Stil einen Artikel schreiben.
 
-## Struktur eines Artikels
+### Artikelstruktur
 
 Auf Basis der bestehenden Artikel hat sich eine Struktur durchgesetzt, die stets gleich oder sehr ähnlich sein sollte. Headline der Kategorie 1 wird automatisch erzeugt. Ebenso eine weitere der Kategorie 2. Es kann also direkt mit den Spielernamen als Headline Kat. 3 bekonnen werden. Kategorie 2 folgt später noch einmal zum Ende des Artikels.
 
@@ -90,9 +112,11 @@ Beispiel-Struktur der Überschriften nach dem ersten include:
 ### Überschrift Kat 3
 ```
 
-
+### VG-Wort
 
 Das vgwort include wird in layout "post.html" an die Posts gehängt. Darüber wird die im "front matter" vergebene "vgwort_tracking_id" in jeden Artikel eingebunden.
+
+### Werdegang Tabelle
 
 Je Artikel soll eine Tabelle des Werdegangs stehen. Wichtig ist die korrekte Verschachtelung der HTML Tabellen-Tags. Hier ein HTML-Snippet:
 
@@ -106,13 +130,13 @@ Je Artikel soll eine Tabelle des Werdegangs stehen. Wichtig ist die korrekte Ver
 </table>
 ```
 
-## Einbinden von Bildern und Videos
+### Bilder und Videos
 
 Für das Einbinden werden 2 includes bereitgestellt. Nach dem include sollte jeweils ein Kommentar in einem em-tag folgen.
 
 Man kann Bilder und andere Medien auf über normales HTML einbinden. Es sollten jedoch die includes verwendet werden, da man darüber einen einheitlichen Stil sicherstellt.
 
-### Bilder
+#### Bilder
 
 Für das Einbinden von Bildern muss die Datei unter "assets/images/artikelbilder" liegen. Der Name der dort liegenden Datei muss in ein include als Parameter eingebunden werden.
 
@@ -121,7 +145,7 @@ Für das Einbinden von Bildern muss die Datei unter "assets/images/artikelbilder
 <em>Foto: ein sinnvoller Kommentar</em>
 ```
 
-### Videos
+#### Videos
 
 Es werden nur Videos von YouTube per include eingebunden. Man muss die ID des Videos als Parameter angeben.
 
@@ -132,7 +156,7 @@ Beispiel: Ein Video ist bei YouTube über den Link https://www.youtube.com/watch
 <em>Video: ein sinnvoller Kommentar</em>
 ```
 
-## Verlinkung
+### Verlinkung
 
 Die Verlinkung geschieht manuell. Meist werden die Tags von Vereinen eingebunden. Hier ist auf die richtige Schreibweise der Links zu achten.
 
@@ -143,11 +167,35 @@ Beispiele
     <a class="internal-link" href="/verein/1-fc-magdeburg/">1. FC Magdeburg</a>
     <a class="internal-link" href="/verein/fc-st-pauli/">FC St. Pauli</a>
 
-## Deployment
 
-Das Deployment auf Live geschieht automatisch, sobald man den "master" branch pushed. Man muss sich vorher sicher sein, dass alles so ist wie es sein soll. Es ist immer ratsam in einem anderen branch zu arbeiten. Erst bei release eines neuen Artikels (oder Verbesserungen) soll der master branch gepushed werden.
+## Technische Dokumentation
 
-## Google Analytics
+### Build-Prozess
+
+Befehl zum Erzeugen der Seite
+
+```
+## local development
+bundle exec jekyll build
+
+## live
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
+Die statische Seite wird im Ordner "site" abgelegt. Von dort aus wird sie kopiert in einen von git getrackten Ordner.
+Dieser wird deployt, sodass nur der statische Teil der Seite auf Github landet.
+
+
+### Deployment
+
+```
+cd ~/Code/static-traumelf
+git add .
+git commit -m ''
+git push
+```
+
+### Google Analytics
 
 Google Analytics ist eingebunden über ein include "google-analytics.html". Der key ist in der config.yml zu finden. Google Analytics ist nur auf dem Server aktiv, d.h. eine lokale Umgebung erzeugt keine Events bzw. Daten, welche die Auswertung beeinflussen. Dazu wird auf dem Live-Server eine Umgebungsvariable gesetzt.
 
@@ -157,18 +205,26 @@ Google Analytics ist eingebunden über ein include "google-analytics.html". Der 
 ### Domain
 
   * https://meine-traumelf.de
+  * traumelf.github.io
 
+Die Domain ist beim Anbieter https://do.de hinterlegt. Dort ist ein Setup zur Weiterleitung
+zu github konfiguriert.
 
-## Liquid in Jekyll
+#### DNS Setup
+
+```
+*.meine-traumelf.de MX traumelf.github.io
+www.meine-traumelf.de CNAME traumelf.github.io
+meine-traumelf.de ALIAS traumelf.github.io
+```
+
+### Liquid in Jekyll
 
 Liquid ist die HTML Template Sprache, welche in Jekyll verwendet wird.
 
 Dokumentation:
 
 * https://shopify.github.io/liquid/
-
-
-
 
 ## Command line helpers
 
