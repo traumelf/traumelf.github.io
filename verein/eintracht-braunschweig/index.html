@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/assets/main.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /><link type="application/atom+xml" rel="alternate" href="https://meine-traumelf.de/feed.xml" title="Meine Traumelf" /><script>
@@ -59,6 +60,17 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 Ehemalige Profis und Legenden deines Lieblingsvereins Eintracht Braunschweig stellen ihre persönliche Traumelf aus früheren Mitspielern vor und blicken dabei auf ihre Karriere zurück.
 </p><ul class="post-list">
   <li class="article">
+  <h3><a class="post-link" href="/spieler/thorsten-stuckmann/">Thorsten Stuckmann</a></h3>
+
+  <a class="post-link" href="/spieler/thorsten-stuckmann/">
+      <div class="img-container-wrapper">
+          <div class="img-container" style="background-image:url(/assets/images/person/Thorsten-Stuckmann.png);"></div>
+      </div>
+  </a><p class="post-list-excerpt">Publikumsliebling bei Eintracht Braunschweig, ausgemustert bei Alemannia Aachen und Elfmeterkiller in England. Die Karriere von Thorsten Stuckmann verlief nicht immer gradlinig, aber klang mit einem Happy End aus. Hier stellt »Stucki« seine Traumelf aus seinen früheren Teamkameraden vor und erinnert sich raue Sitten auf der Insel, Halbzeitansagen von Matze Lehmann und den dicken Hintern von Benjamin Auer. Außerdem verrät er, was Friedhelm Funkel der neuen Trainergeneration voraus hat.</p><p class="button-container">
+      <a href="/spieler/thorsten-stuckmann/" class="button">Zur Traumelf</a>
+  </p>
+</li>
+<li class="article">
   <h3><a class="post-link" href="/spieler/marco-grimm/">Marco Grimm</a></h3>
 
   <a class="post-link" href="/spieler/marco-grimm/">
@@ -244,6 +256,8 @@ Ehemalige Profis und Legenden deines Lieblingsvereins Eintracht Braunschweig ste
 
     <ul>
     
+        <li><a href="/spieler/thorsten-stuckmann/">Thorsten Stuckmann</a></li>
+    
         <li><a href="/trainer/willi-lemke/">Willi Lemke</a></li>
     
         <li><a href="/spieler/fabian-boll/">Fabian Boll</a></li>
@@ -374,19 +388,22 @@ Ehemalige Profis und Legenden deines Lieblingsvereins Eintracht Braunschweig ste
   </div>
 
 </footer>
-<script>
-    // responsive navigation
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 
-    
+<script>
+// responsive navigation
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
 
 <script>
 window.cookieconsent.initialise({
@@ -408,6 +425,15 @@ window.cookieconsent.initialise({
   }
 });
 </script>
+
+<script>
+tippy('.tags-sub-item-name', {
+  allowHTML: true,
+  theme: 'light',
+  placement: 'right'
+});
+</script>
+
   </body>
 
 </html>

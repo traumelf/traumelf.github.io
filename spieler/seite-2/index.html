@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/assets/main.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /><link type="application/atom+xml" rel="alternate" href="https://meine-traumelf.de/feed.xml" title="Meine Traumelf" /><script>
@@ -63,6 +64,17 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
 </p>
 
     <ul class="post-list"><li class="article">
+  <h3><a class="post-link" href="/spieler/holger-wehlage/">Holger Wehlage</a></h3>
+
+  <a class="post-link" href="/spieler/holger-wehlage/">
+      <div class="img-container-wrapper">
+          <div class="img-container" style="background-image:url(/assets/images/person/Holger-Wehlage-beim-MSV-Duisburg.png);"></div>
+      </div>
+  </a><p class="post-list-excerpt">Ex-Bundesliga-Spieler Holger Wehlage hat in seiner abwechslungsreichen Karriere viele Höhen und einige Tiefen erlebt. Hier stellt er seine Traumelf aus früheren Mitspieler vor und erinnert sich dabei an den genialen Johan Micoud, das Double mit Werder Bremen sowie an seine Aufstiege mit dem FC St. Pauli, dem MSV Duisburg und Rot-Weiß Essen.</p><p class="button-container">
+      <a href="/spieler/holger-wehlage/" class="button">Zur Traumelf</a>
+  </p>
+</li>
+<li class="article">
   <h3><a class="post-link" href="/spieler/bernd-franke/">Bernd Franke</a></h3>
 
   <a class="post-link" href="/spieler/bernd-franke/">
@@ -183,17 +195,6 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
       <a href="/spieler/florian-bruns/" class="button">Zur Traumelf</a>
   </p>
 </li>
-<li class="article">
-  <h3><a class="post-link" href="/spieler/steffi-jones/">Steffi Jones</a></h3>
-
-  <a class="post-link" href="/spieler/steffi-jones/">
-      <div class="img-container-wrapper">
-          <div class="img-container" style="background-image:url(/assets/images/person/Steffi-Jones-im-DFB-Trikot.jpg);"></div>
-      </div>
-  </a><p class="post-list-excerpt">Steffi Jones war zwei Jahrzehnte lang weltweit eine der prägenden Figuren und erfolgreichsten Spielerinnen des Frauenfußballs. Von 1991 bis 2007 lief sie insgesamt 111 Mal für die deutsche Nationalmannschaft auf. Hier stellt die Welt- und Europameisterin ihre Traumelf aus früheren Mitspielerinnen vor, spricht über die Entwicklung des Frauenfußballs und erinnert sich an ein verunglücktes Laufduell mit Timo Werner.</p><p class="button-container">
-      <a href="/spieler/steffi-jones/" class="button">Zur Traumelf</a>
-  </p>
-</li>
 </ul>
 
 <p class="pagination-divider"></p>
@@ -254,6 +255,8 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
     <h3>Die Traumelf weiterer Legenden</h3>
 
     <ul>
+    
+        <li><a href="/spieler/thorsten-stuckmann/">Thorsten Stuckmann</a></li>
     
         <li><a href="/trainer/willi-lemke/">Willi Lemke</a></li>
     
@@ -393,19 +396,22 @@ Laufbahn ihre persönliche Traumelf und blicken dabei auf ihre Karriere zurück.
   </div>
 
 </footer>
-<script>
-    // responsive navigation
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 
-    
+<script>
+// responsive navigation
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
 
 <script>
 window.cookieconsent.initialise({
@@ -427,6 +433,15 @@ window.cookieconsent.initialise({
   }
 });
 </script>
+
+<script>
+tippy('.tags-sub-item-name', {
+  allowHTML: true,
+  theme: 'light',
+  placement: 'right'
+});
+</script>
+
   </body>
 
 </html>

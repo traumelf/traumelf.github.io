@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/assets/main.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /><link type="application/atom+xml" rel="alternate" href="https://meine-traumelf.de/feed.xml" title="Meine Traumelf" /><script>
@@ -292,6 +293,31 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 
     
 
+    <div class="related-post">
+
+        <h3><a href="/spieler/thorsten-stuckmann/">Thorsten Stuckmann</a></h3>
+        <a href="/spieler/thorsten-stuckmann/">
+            <div class="related-img-container-wrapper">
+                <div class="img-container" style="background-image:url(/assets/images/person/Thorsten-Stuckmann.png);"></div>
+            </div>
+        </a>
+        <a href="/verein/eintracht-braunschweig/">Eintracht Braunschweig</a>
+    </div>
+
+      
+      
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
   
 
     
@@ -350,81 +376,6 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 
       
       
-    
-
-  
-
-    
-    
-    
-
-    
-
-    
-
-  
-
-    
-    
-    
-
-    
-
-    
-
-  
-
-    
-    
-    
-
-    
-
-    
-
-  
-
-    
-    
-    
-
-    
-
-    
-
-  
-
-    
-    
-    
-
-    
-
-    
-
-  
-
-    
-    
-    
-
-    
-
-    
-
-    <div class="related-post">
-
-        <h3><a href="/trainer/michael-krueger/">Michael Krüger</a></h3>
-        <a href="/trainer/michael-krueger/">
-            <div class="related-img-container-wrapper">
-                <div class="img-container" style="background-image:url(/assets/images/person/Michael-Krueger-Trainer.png);"></div>
-            </div>
-        </a>
-        <a href="/verein/eintracht-braunschweig/">Eintracht Braunschweig</a>
-    </div>
-
-      
-      
         
 
 </div>
@@ -457,6 +408,8 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
     <h3>Die Traumelf weiterer Legenden</h3>
 
     <ul>
+    
+        <li><a href="/spieler/thorsten-stuckmann/">Thorsten Stuckmann</a></li>
     
         <li><a href="/trainer/willi-lemke/">Willi Lemke</a></li>
     
@@ -596,19 +549,22 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
   </div>
 
 </footer>
-<script>
-    // responsive navigation
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 
-    
+<script>
+// responsive navigation
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
 
 <script>
 window.cookieconsent.initialise({
@@ -630,6 +586,15 @@ window.cookieconsent.initialise({
   }
 });
 </script>
+
+<script>
+tippy('.tags-sub-item-name', {
+  allowHTML: true,
+  theme: 'light',
+  placement: 'right'
+});
+</script>
+
   </body>
 
 </html>

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/assets/main.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /><link type="application/atom+xml" rel="alternate" href="https://meine-traumelf.de/feed.xml" title="Meine Traumelf" /><script>
@@ -66,6 +67,17 @@ auf und neben dem Fußballplatz.
 </p>
 
     <ul class="post-list"><li class="article">
+  <h3><a class="post-link" href="/spieler/christian-weber/">Christian Weber</a></h3>
+
+  <a class="post-link" href="/spieler/christian-weber/">
+      <div class="img-container-wrapper">
+          <div class="img-container" style="background-image:url(/assets/images/person/Christian-Weber-Fortuna-Düsseldorf-min.png);"></div>
+      </div>
+  </a><p class="post-list-excerpt">Christian Weber hat fast 500 Spiele auf dem Buckel und in seinen 18 Jahren im Fußballgeschäft entsprechend viel erlebt. Hier stellt er seine Traumelf aus seinen früheren Mitspielern in Fürth, Düsseldorf und bei AE Larissa vor und blickt auf seine Karriere zurück. Dabei erinnert er sich an Trainingsschlägereien mit Sascha Rösler, den unkonventionellen Tanzstil von Marco Christ und die verhinderte Aufstiegsfeier nach der Bundesliga-Rückkehr der Fortuna.</p><p class="button-container">
+      <a href="/spieler/christian-weber/" class="button">Zur Traumelf</a>
+  </p>
+</li>
+<li class="article">
   <h3><a class="post-link" href="/spieler/marc-arnold/">Marc Arnold</a></h3>
 
   <a class="post-link" href="/spieler/marc-arnold/">
@@ -186,17 +198,6 @@ auf und neben dem Fußballplatz.
       <a href="/spieler/karsten-baumann/" class="button">Zur Traumelf</a>
   </p>
 </li>
-<li class="article">
-  <h3><a class="post-link" href="/spieler/thomas-broich/">Thomas Broich</a></h3>
-
-  <a class="post-link" href="/spieler/thomas-broich/">
-      <div class="img-container-wrapper">
-          <div class="img-container" style="background-image:url(/assets/images/person/Ex-Profi-Thomas-Broich-im-Trikot-des-1.FC-Koeln.jpg);"></div>
-      </div>
-  </a><p class="post-list-excerpt">Thomas Broich sollte Anfang des Jahrtausends den deutschen Fußball retten, doch es kam anders. Die Doku “Tom Meets Zizou” aus dem Jahr 2011 zeichnete das Bild eines mündigen Profis, der nicht bereit war, sich dem Bundesliga-Business anzupassen. Stattdessen wechselte er nach Australien, wo er nach sieben Jahren bei Brisbane Roar zum “Fußballer des Jahrzehnts” gewählt wurde. Hier stellt er seine persönliche Traumelf aus früheren Teamkollegen vor, spricht über die Improvisationskünste von seinem Ex-Trainer Christoph Daum und erklärt, warum er gerne selbst Trainer werden möchte.</p><p class="button-container">
-      <a href="/spieler/thomas-broich/" class="button">Zur Traumelf</a>
-  </p>
-</li>
 </ul>
 
 <p class="pagination-divider"></p>
@@ -261,6 +262,8 @@ auf und neben dem Fußballplatz.
     <h3>Die Traumelf weiterer Legenden</h3>
 
     <ul>
+    
+        <li><a href="/spieler/thorsten-stuckmann/">Thorsten Stuckmann</a></li>
     
         <li><a href="/trainer/willi-lemke/">Willi Lemke</a></li>
     
@@ -409,19 +412,22 @@ auf und neben dem Fußballplatz.
   </div>
 
 </footer>
-<script>
-    // responsive navigation
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 
-    
+<script>
+// responsive navigation
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
 
 <script>
 window.cookieconsent.initialise({
@@ -443,6 +449,15 @@ window.cookieconsent.initialise({
   }
 });
 </script>
+
+<script>
+tippy('.tags-sub-item-name', {
+  allowHTML: true,
+  theme: 'light',
+  placement: 'right'
+});
+</script>
+
   </body>
 
 </html>

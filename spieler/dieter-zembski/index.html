@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/assets/main.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /><link type="application/atom+xml" rel="alternate" href="https://meine-traumelf.de/feed.xml" title="Meine Traumelf" /><script>
@@ -288,6 +289,31 @@ Ole Björnmose // Sturm // Werder Bremen</p>
 
     <div class="related-post">
 
+        <h3><a href="/spieler/thorsten-stuckmann/">Thorsten Stuckmann</a></h3>
+        <a href="/spieler/thorsten-stuckmann/">
+            <div class="related-img-container-wrapper">
+                <div class="img-container" style="background-image:url(/assets/images/person/Thorsten-Stuckmann.png);"></div>
+            </div>
+        </a>
+        <a href="/verein/eintracht-braunschweig/">Eintracht Braunschweig</a>
+    </div>
+
+      
+      
+    
+
+  
+
+    
+    
+    
+
+    
+
+    
+
+    <div class="related-post">
+
         <h3><a href="/trainer/willi-lemke/">Willi Lemke</a></h3>
         <a href="/trainer/willi-lemke/">
             <div class="related-img-container-wrapper">
@@ -334,31 +360,6 @@ Ole Björnmose // Sturm // Werder Bremen</p>
 
       
       
-    
-
-  
-
-    
-    
-    
-
-    
-
-    
-
-    <div class="related-post">
-
-        <h3><a href="/spieler/dennis-brinkmann/">Dennis Brinkmann</a></h3>
-        <a href="/spieler/dennis-brinkmann/">
-            <div class="related-img-container-wrapper">
-                <div class="img-container" style="background-image:url(/assets/images/person/Dennis-Brinkmann.png);"></div>
-            </div>
-        </a>
-        <a href="/verein/eintracht-braunschweig/">Eintracht Braunschweig</a>
-    </div>
-
-      
-      
         
 
 </div>
@@ -391,6 +392,8 @@ Ole Björnmose // Sturm // Werder Bremen</p>
     <h3>Die Traumelf weiterer Legenden</h3>
 
     <ul>
+    
+        <li><a href="/spieler/thorsten-stuckmann/">Thorsten Stuckmann</a></li>
     
         <li><a href="/trainer/willi-lemke/">Willi Lemke</a></li>
     
@@ -530,19 +533,22 @@ Ole Björnmose // Sturm // Werder Bremen</p>
   </div>
 
 </footer>
-<script>
-    // responsive navigation
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 
-    
+<script>
+// responsive navigation
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
 
 <script>
 window.cookieconsent.initialise({
@@ -564,6 +570,15 @@ window.cookieconsent.initialise({
   }
 });
 </script>
+
+<script>
+tippy('.tags-sub-item-name', {
+  allowHTML: true,
+  theme: 'light',
+  placement: 'right'
+});
+</script>
+
   </body>
 
 </html>
