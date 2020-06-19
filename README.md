@@ -226,6 +226,14 @@ Dokumentation:
 
 * https://shopify.github.io/liquid/
 
+### JS Library "Tippy"
+
+Für die Anzeige mittels popover wird eine Library namens Tippy verwendet.
+
+Dokumentation:
+
+* https://atomiks.github.io/tippyjs/
+
 ## Command line helpers
 
 ```bash
