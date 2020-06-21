@@ -234,6 +234,46 @@ Dokumentation:
 
 * https://atomiks.github.io/tippyjs/
 
+### Zwei Github Accounts
+
+Um 2 Github Accounts vom selben Rechner pflegen zu können muss man einige Einstellungen treffen.
+
+* Mehr Infos unter https://gist.github.com/oanhnn/80a89405ab9023894df7
+
+Folgendes ist zu tun
+
+* zweiten SSH-Key anlegen
+* ssh-config anpassen
+
+```
+Host github.com  
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
+Host traumelf.github.com  
+    HostName github.com
+    IdentityFile ~/.ssh/traumelf_id_rsa
+    IdentitiesOnly yes
+```
+
+* Verbindung mit Github testen
+
+```
+~ ssh -T git@github.com                                       
+Hi aszel! You've successfully authenticated, but GitHub does not provide shell access.
+
+~ ssh -T git@traumelf.github.com                                   
+Hi traumelf! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+* Clonen des repository mit Angabe der config
+
+```
+git clone git@traumelf.github.com:traumelf/traumelf.github.io.git
+```
+
+
 ## Command line helpers
 
 ```bash
