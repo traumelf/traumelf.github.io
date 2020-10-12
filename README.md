@@ -167,6 +167,36 @@ Beispiele
     <a class="internal-link" href="/verein/1-fc-magdeburg/">1. FC Magdeburg</a>
     <a class="internal-link" href="/verein/fc-st-pauli/">FC St. Pauli</a>
 
+## Open Graph
+
+```
+<meta property="og:title" content="" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" />
+
+für die Seiten
+<meta property="og:type" content="website" />
+
+für die posts
+<meta property="og:type" content="article" />
+
+datetime - When the article was first published.
+<meta property="article:published_time" content:"" />
+
+When the article was last changed.
+<meta property="article:modified_time" content:"" />
+
+Writers of the article.
+<meta property="article:author" content:"" />
+
+A high-level section name. E.g. Technology
+<meta property="article:section" content:"" />
+
+Tag words associated with this article.
+<meta property="article:tag" content:"tag-1" />
+<meta property="article:tag" content:"tag-2" />
+<meta property="article:tag" content:"tag-n" />
+```
 
 ## Technische Dokumentation
 
