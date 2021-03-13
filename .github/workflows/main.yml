@@ -29,6 +29,6 @@ jobs:
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Update Meine-Traumelf
-          body: ${{github.event.head_commit.message}}
+          body: Update - ${{github.event.head_commit.message}}
           to: meinetraumelf@gmail.com,martinbecker.de@gmail.com
           from: martinbecker.de+github@gmail.com
