@@ -303,6 +303,33 @@ Hi traumelf! You've successfully authenticated, but GitHub does not provide shel
 git clone git@traumelf.github.com:traumelf/traumelf.github.io.git
 ```
 
+### Updating
+
+Das Projekt baut auf Ruby auf. Ruby besteht aus Ruby-Gems. Jekyll ist ein Ruby-Gem.\
+Rugy-Gems werden durch den Bundler (auch ein Ruby-Gem) gemanaged.\
+Wenn sich nun etwas ändert, z.B. die Ruby-Version wird hochgezogen, dann muss man einige Dinge
+updaten. Das kann Kopfschmerzen verursachen, da viele kleine Teile voneinander abhängig sind.\
+Hier eine kleine Hilfe.
+
+```
+# Ruby version
+ruby -v
+
+# Gems update
+# Check die Gemfile
+# hier auf die Jekyll Version achten!
+# Wenn ein update für Jekyll ansteht dann sollte das durchgeführt werden
+# siehe https://jekyllrb.com/docs/upgrading/
+# vor dem update die Gemfile.lock umbenennen in Gemfile.lock.bak
+
+cd /home/martin/Code/traumelf
+gem update
+
+# ggf. gibt es hier Ärger mit Abhängigkeiten
+# -> Google
+# zuletzt musste ich ein Gem hinzufügen (das findet man nun in der Gemfile)
+bundle add webrick
+```
 
 ## Command line helpers
 
